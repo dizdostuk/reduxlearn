@@ -13,14 +13,15 @@ function visibilityFilter(state = SHOW_ALL, action) {
 
 function todos(state = [], action) {
   switch(action.type) {
-    case ADD_TODO: return Object.assign({}, state, {
-      todos: [
-        ...state.todos,
-        {
-          text: action.text,
-          completed: false
-        }
-      ]
+    case ADD_TODO:
+      return Object.assign({}, state, {
+        todos: [
+          ...state.todos,
+          {
+            text: action.text,
+            completed: false
+          }
+        ]
     });
     case TOGGLE_TODO:
       return Object.assign({}, state, {
