@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 import { incCounter } from "./actions/increment";
 import "./App.css";
 
-store.subscribe(() => {
+/*store.subscribe(() => {
   list.innerHTML = '';
   trackInput.value = '';
   store.getState().forEach(track => {
@@ -11,7 +11,7 @@ store.subscribe(() => {
     li.textContent = track;
     list.appendChild(li);
   })
-})
+})*/
 
 class App extends Component {
   render() {
@@ -26,9 +26,9 @@ class App extends Component {
   }
 };
 
-const mapStateToProps = store => {
+const mapStateToProps = state => {
   return {
-    counter: store.counter,
+    counter: state.counter,
   }
 }
 
